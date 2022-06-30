@@ -4,10 +4,12 @@ on:
   push:
     branches:
       - v-5.5.27
+      - v-5.5.50
       - master
   pull_request:
     branches:
       - v-5.5.27
+      - v-5.5.50
       - master
   schedule:
     - cron: '0 0 * * *'
