@@ -3,11 +3,11 @@ name: tests
 on:
   push:
     branches:
-      - v5.5.27
+      - v-5.5.27
       - master
   pull_request:
     branches:
-      - v5.5.27
+      - v-5.5.27
       - master
   schedule:
     - cron: '0 0 * * *'
