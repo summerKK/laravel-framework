@@ -11,8 +11,6 @@ on:
       - v-5.5.27
       - v-5.5.50
       - master
-  schedule:
-    - cron: '0 0 * * *'
 
 jobs:
   linux_tests:
