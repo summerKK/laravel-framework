@@ -4,11 +4,13 @@ on:
   push:
     branches:
       - v-5.5.27
+      - v-5.5.35
       - v-5.5.50
       - master
   pull_request:
     branches:
       - v-5.5.27
+      - v-5.5.35
       - v-5.5.50
       - master
 
