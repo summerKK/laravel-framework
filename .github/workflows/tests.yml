@@ -44,7 +44,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: [ '7.0','7.3','7.4' ]
+        php: [ '7.0','7.3' ]
         stability: [ prefer-lowest, prefer-stable ]
 
     name: PHP ${{ matrix.php }} - ${{ matrix.stability }}
@@ -74,7 +74,10 @@ jobs:
         with:
           timeout_minutes: 5
           max_attempts: 5
-          command: composer update --${{ matrix.stability }} --prefer-dist --no-interaction --no-progress --no-plugins
+          command: |
+            composer config --no-plugins allow-plugins.kylekatarnls/update-helper true
+            composer update --${{ matrix.stability }} --prefer-dist --no-interaction --no-progress
+
 
       - name: Execute tests
         run: vendor/bin/phpunit --verbose
