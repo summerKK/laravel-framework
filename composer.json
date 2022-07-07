@@ -1,7 +1,10 @@
 {
     "name": "laravel/framework",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "homepage": "https://laravel.com",
     "support": {
@@ -124,7 +127,10 @@
         "symfony/psr-http-message-bridge": "Required to psr7 bridging features (~1.0)."
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
